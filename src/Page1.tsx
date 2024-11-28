@@ -1,12 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export const Page1 = () => {
   return (
     <div>
-      <h1>Page1</h1>
-      <Link to="/page1/detailA">DetailA</Link>
-      <br />
-      <Link to="/page1/detailB">DetailB</Link>
+      <h1>Page 1</h1>
+      <nav>
+        <ul>
+          <li>
+            <Link to="detailA">Detail A</Link>
+          </li>
+          <li>
+            <Link to="detailB">Detail B</Link>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
     </div>
   );
 };
