@@ -3,7 +3,7 @@ import { Home } from "../Home";
 import { Page1 } from "../Page1";
 import { Page2 } from "../Page2";
 import { Page1Routes } from "./Page1Routes";
-
+import { Page2Routes } from "./Page2Routes";
 export const Router = () => {
   return (
     <div>
@@ -18,7 +18,15 @@ export const Router = () => {
             />
           ))}
         </Route>
-        <Route path="/page2" element={<Page2 />} />
+        <Route path="/page2" element={<Page2 />}>
+          {Page2Routes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={route.children}
+            />
+          ))}
+        </Route>
       </Routes>
     </div>
   );
