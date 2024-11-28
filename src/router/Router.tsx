@@ -4,6 +4,7 @@ import { Page1 } from "../Page1";
 import { Page2 } from "../Page2";
 import { Page1Routes } from "./Page1Routes";
 import { Page2Routes } from "./Page2Routes";
+import { Page404 } from "../page404";
 export const Router = () => {
   return (
     <div>
@@ -27,6 +28,7 @@ export const Router = () => {
             />
           ))}
         </Route>
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </div>
   );
