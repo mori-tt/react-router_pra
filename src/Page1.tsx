@@ -4,6 +4,8 @@ export const Page1 = () => {
   const arr = [...Array(100).keys()];
   const navigate = useNavigate();
 
+  const onClickDetailA = () => navigate("detailA", { state: arr });
+
   return (
     <div>
       <h1>Page 1</h1>
@@ -19,6 +21,9 @@ export const Page1 = () => {
           </li>
           <li>
             <Link to="detailB">Detail B</Link>
+          </li>
+          <li>
+            <button onClick={onClickDetailA}>Detail A</button>
           </li>
         </ul>
       </nav>
